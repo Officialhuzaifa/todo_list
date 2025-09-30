@@ -62,6 +62,7 @@ menu = ["Dashboard", "View Tasks"]
 choice = st.sidebar.radio("Navigation", menu)
 
 # ---------------- Dashboard ---------------
+# ---------------- Dashboard ---------------
 if choice == "Dashboard":
     st.subheader("📊 Dashboard Overview")
     tasks = read_tasks()
@@ -71,9 +72,9 @@ if choice == "Dashboard":
     progress = int((completed_tasks / total_tasks) * 100) if total_tasks else 0
 
     import pandas as pd
-    import numpy as np
+    import matplotlib.pyplot as plt
 
-    # --- Top KPI Cards with trend arrows ---
+    # --- Top KPI Cards ---
     col1, col2, col3 = st.columns(3)
     trend_completed = "↑" if completed_tasks >= (total_tasks - completed_tasks) else "↓"
     trend_pending = "↑" if pending_tasks > 0 else "↓"
@@ -100,9 +101,44 @@ if choice == "Dashboard":
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown("### Progress")
+    # --- Progress Bar ---
+    st.markdown("### 📈 Task Completion Progress")
     st.progress(progress)
     st.markdown(f"**{progress}%** of tasks completed")
+
+    # --- Visualization Section ---
+    if total_tasks > 0:
+        st.markdown("### 📊 Task Distribution")
+
+        col1, col2 = st.columns(2)
+
+        # --- Bar Chart ---
+        with col1:
+            fig, ax = plt.subplots()
+            ax.bar(["Completed", "Pending"], [completed_tasks, pending_tasks])
+            ax.set_title("Task Status Overview", fontsize=12)
+            ax.set_ylabel("Number of Tasks")
+            for i, v in enumerate([completed_tasks, pending_tasks]):
+                ax.text(i, v + 0.1, str(v), ha='center', fontweight='bold')
+            st.pyplot(fig)
+
+        # --- Pie Chart ---
+        with col2:
+            fig2, ax2 = plt.subplots()
+            ax2.pie(
+                [completed_tasks, pending_tasks],
+                labels=["Completed", "Pending"],
+                autopct="%1.1f%%",
+                startangle=90,
+                colors=["#16a34a", "#dc2626"],
+                wedgeprops={"edgecolor": "white", "linewidth": 1.5}
+            )
+            ax2.set_title("Task Completion Ratio", fontsize=12)
+            st.pyplot(fig2)
+
+    else:
+        st.info("No tasks available yet. Add some tasks to see the dashboard insights.")
+
     
 # ---------------- View Tasks ----------------
 elif choice == "View Tasks":
