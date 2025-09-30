@@ -13,9 +13,12 @@ A simple and interactive **To-Do List application** to help users manage tasks e
 - Optional: Categorize tasks or set priority (future enhancement).
 
 ---
-In this image you can see the image of app where you can add ,update,read and delete your task easily 
+ **Dashboard Image:**
+You Can see you all task data in this dashboard of app easily
 
-![App Screenshot](view.png)
+<p align="center">
+  <img src="dash.png" alt="Dashboard" width="100%"/>
+</p>
 
 ---
 
@@ -27,10 +30,14 @@ In this image you can see the image of app where you can add ,update,read and de
 - **Version Control:** Git & GitHub
 
 ---
-- **Dashboard Image:**
-You Can see you all task data in this dashboard of app easily
 
-![App Screenshot](dash.png)
+
+
+In this image you can see the image of app where you can add ,update,read and delete your task easily 
+
+![App Screenshot](view.png)
+
+
 ---
 ## 🚀 Installation & Usage
 
