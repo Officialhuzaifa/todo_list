@@ -1,47 +1,82 @@
-# To-Do List Project
-
-A simple and interactive **To-Do List application** to help users manage tasks efficiently. This project allows users to **add, update, complete, and delete tasks** in a clean and organized interface.
-
----
-
-## 🛠 Features
-
-- Add new tasks with a title and optional description.
-- Mark tasks as completed or pending.
-- Edit or delete existing tasks.
-- Responsive design (works on desktop and mobile).
-- Optional: Categorize tasks or set priority (future enhancement).
-
----
- **Dashboard Image:**
-You Can see you all task data in this dashboard of app easily
+<h1 align="center">📝 To-Do List Project (CLI + Streamlit Dashboard)</h1>
 
 <p align="center">
-  <img src="dash.png" alt="Dashboard" width="100%"/>
+  <b>A simple and interactive To-Do List application built using Python.</b><br>
+  Manage your tasks through a clean <b>CLI</b> or a modern <b>Streamlit Dashboard</b>.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python" />
+  <img src="https://img.shields.io/badge/Framework-Streamlit-red?logo=streamlit" />
+  <img src="https://img.shields.io/badge/Database-SQLite-green?logo=sqlite" />
+  <img src="https://img.shields.io/badge/Made%20with-❤️-pink" />
 </p>
 
 ---
 
-## 💻 Tech Stack
+## 🌟 Overview
 
-- **Frontend:** streamlit 
-- **Backend:**  Python  
-- **Database:**  SQLite  
-- **Version Control:** Git & GitHub
+This project allows users to **add, update, complete, and delete tasks** easily — either through a **Command Line Interface (CLI)** or a **Streamlit web dashboard**.  
+It’s designed for both quick task handling and a visually organized experience.
 
 ---
 
+## 🧩 Features
 
+✅ Add new tasks with title & description  
+✅ Mark tasks as completed or pending  
+✅ Edit or delete existing tasks  
+✅ View all tasks in a beautiful dashboard  
+✅ CLI support for quick terminal access  
+✅ Responsive design — works on all screens  
+✅ Future-ready for task categorization & priority  
 
-In this image you can see the image of app where you can add ,update,read and delete your task easily 
+---
 
+## ⚙️ Tech Stack
+
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | Streamlit |
+| **Backend / Logic** | Python |
+| **Database** | SQLite |
+| **Version Control** | Git & GitHub |
+
+---
+
+## 📸 Screenshots
+
+### 🖥 Dashboard View
+> Easily view and manage all tasks using the Streamlit interface.
+
+<p align="center">
+  <img src="dash.png" alt="Dashboard" width="90%"/>
+</p>
+
+---
+
+### 💻 CLI Interface
+> Manage tasks directly from your terminal using simple commands.
+
+<p align="center">
+  <img src="cli.png" alt="CLI Interface" width="90%"/>
+</p>
+
+---
+
+### 📱 App View
 ![App Screenshot](view.png)
 
-
 ---
+
 ## 🚀 Installation & Usage
 
-1. Clone the repository:
-
+### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/Officialhuzaifa/todo_list.git
+cd todo_list
+```
+
+<p align="center">
+<img src="https://img.shields.io/badge/Made%20with-❤️-pink Huzaifa" />
+</p>
